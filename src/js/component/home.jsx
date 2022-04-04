@@ -3,11 +3,11 @@ import Luz from "/workspace/traffic-light/src/js/component/luz.jsx";
 
 //create your first component
 const Home = () => {
-	const [selected, setSelected] = useState("semaforo");
+	const [selected, setSelected] = useState("");
 
-	const red = "red " + selected;
-	const yellow = "yellow " + selected;
-	const green = "green " + selected;
+	const red = selected === "rtrue" ? "semaforo red glow":"semaforo red ";
+	const yellow = selected === "ytrue" ? "semaforo red glow":"semaforo yellow ";
+	const green = selected === "gtrue" ? "semaforo red glow":"semaforo yellow ";
 
 	return (
 		<div className="body">
@@ -16,13 +16,13 @@ const Home = () => {
 				<div>
 					<div
 						className={red}
-						onClick={() => setSelected("semaforo glow")}></div>
+						onClick={() => setSelected("rtrue")}></div>
 					<div
 						className={yellow}
-						onClick={() => setSelected("semaforo glow")}></div>
+						onClick={() => setSelected("ytrue")}></div>
 					<div
 						className={green}
-						onClick={() => setSelected("semaforo glow")}></div>
+						onClick={() => setSelected("gtrue")}></div>
 				</div>
 			</div>
 		</div>
