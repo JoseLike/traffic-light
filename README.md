@@ -34,8 +34,10 @@ $ npm install
 ## Estructura y explicación del codigo ⚙️
 
 * La estructura del ejercicio se basa en componentes jsx de React.
-* Sergi realiza los componentes cards y footes (.jsx) y Jose Luis hace lo mismo con Navbar y Jumbotron.
-* Todos los componentes se importan en Home.jsx y se insertan en el componente Home. Se utilizan divs para organizar los componentes.
+* Se crea un semaforo directamente en el return del componente Home. Utilizamos propiedades CSS para ello. Las clases cuerpo y semaforo-top componen la estructura negra del semaforo. La clase semaforo son los circulos interiores. Las clases red , yellow y green son las clases que aportan el background color con el mismo nombre. Y la clase glow añade el efecto de iluminacion.
+* Para el codigo se utiliza el hook useState con variable selected y funcion selectora setSelected.
+*En el return hay un div que encierra los tres colores del semaforo. Cada uno un div diferente. Jugaremos con la classname y la fuincion onClick. cuando se hace click en cualquier div mencionado, cambia el valor de selected (rtrue, ytrue, gtrue). 
+* Arriba hemos creado 3 variables (red, yellow y green) Dentro de cada una hay un operador ternario el cual lee el valor de selected que se cambia al hacer click en el div mediante el selector setSelected.(Al renderizar la primera vez selected esta vacio). Basicamente todas las variables seleccionan las clases de CSS que dan el color al semaforo y cuando selected por ejemplo es "rtrue", la variable red devuelve las clases anteriores mas la clase glow que añade el efecto de iluminación.
 * Finalmente en Index.js se importa Home y se renderiza.
 
 
