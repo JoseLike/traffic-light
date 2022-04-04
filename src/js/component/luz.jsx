@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Luz = (props) => {
-    return( <div className={props.clase}></div>);
+	return <div className={props.clase}></div>;
 };
 
 Luz.propTypes = {
